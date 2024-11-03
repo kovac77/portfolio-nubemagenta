@@ -100,7 +100,7 @@ section{
 }
 
 .inicio .fondo-inicio {
-    background-image: url(RinAndLen.jpg);
+    background-image: url(imagenes/RinAndLen.jpg);
     background-repeat: no-repeat;
     background-position: center 10%;
     background-size: cover;
