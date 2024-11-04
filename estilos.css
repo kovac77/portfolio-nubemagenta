@@ -107,7 +107,7 @@ section{
     background-size: cover;
     
     bottom: 0;
-    height: 90%;
+    height: 100%;
     left: 0;
     margin: 0; 
     max-height: 100%;
@@ -214,8 +214,6 @@ section{
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
-
-
 
 /*Main - contacto*/
 .contacto {
