@@ -74,15 +74,14 @@ main h1 {
 
 /*contenedores de las sesiones*/
 .contenedor {  
-    height: 50%;
-    max-height: 90vh;
+
     margin-left: 10%;
     margin-right: 10%;
     margin: 5%;
     padding: 10% 10%;
     background-color: rgba(0, 0, 0, 0.6); 
     text-align: center;
-    overflow: hidden;
+    border-radius: 10px;
 
 }
 
@@ -115,7 +114,6 @@ main h1 {
     justify-content: center;
     text-align: center;
     background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
 
     display: grid;
     grid-template-columns: repeat(6,1fr);
@@ -142,28 +140,33 @@ main h1 {
 }
 
 /*Main - productos*/
-.productos{
-    height: 100vh;
-}
-.productos .contenedor-tarjetas{
-    height: auto;
-    width: auto;
-    display: flex;
+.productos .contenedor{
     
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 5%;
 }
 
+.productos .contenedor-col{
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+}
+.productos .contenedor-row{
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid wheat;
+    flex-wrap: wrap;
+    gap: 2%;
+} 
+
 .productos .tarjeta{
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     position: relative;
     box-shadow: 0px 7px 10px rgba( 0,0,0, 0.5);
     overflow: hidden;
     border: 8px solid #fff;
     border-radius: 15px;
-    margin: 0 1%;
+    
+
 }
 
 .productos .tarjeta .img-tarjeta {
@@ -171,6 +174,7 @@ main h1 {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    
 }
 .productos .tarjeta .link-tarjeta{
     display: flex;
