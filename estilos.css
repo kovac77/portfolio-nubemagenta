@@ -151,7 +151,6 @@ main h1 {
 }
 
 /*Main - productos*/
-.productos .contenedor {}
 
 .productos .contenedor-imagenes {
     display: flex;
@@ -169,7 +168,6 @@ main h1 {
     border: 8px solid #fff;
     border-radius: 15px;
     max-width: 400px;
-
 }
 
 .productos .tarjeta .img-tarjeta {
@@ -177,7 +175,6 @@ main h1 {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-
 }
 
 .productos .tarjeta .link-tarjeta {
@@ -201,7 +198,6 @@ main h1 {
 }
 
 /*Main - reseñas*/
-.reseñas {}
 
 .reseñas .grilla-comentarios {
     display: grid;
@@ -215,7 +211,8 @@ main h1 {
 }
 
 .grilla-comentarios>div {
-
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
     border: 2px solid #f57524;
     padding: 3%;
 }
