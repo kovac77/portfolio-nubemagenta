@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio NubeMagenta</title>
     <link rel="stylesheet" href="estilos.css">
+    <!--Font Awesome iconos-->
+    <script src="https://kit.fontawesome.com/0a44d9e8d2.js" crossorigin="anonymous"></script>
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,18 +15,34 @@
 
 <body>
     <header class="header">
-        <div class="menu-link-header">
-            <div class="logo-header">LOGO</div>
-            <nav>
-                <ul>
+        <nav class="menu-header-nav">
+            <!--<div class="logo-header">LOGO</div>-->
+
+            <div class="menu-header-icono">
+                <label for="menu-header-icono-checkbox">
+                    <i class="fa-solid fa-bars fa-2xl" style="color: #dad5e7;"></i> 
+                </label>
+            </div>
+            <input type="checkbox" id="menu-header-icono-checkbox" .class="menu-header-icono-checkbox">
+            <ul id="menu-header-ul" class="menu-header-ul">
+
+                <li class="menu-header-ul-item">
                     <a href="#inicio">Inicio</a>
+                </li>
+                <li class="menu-header-ul-item">
                     <a href="#sobre-mi">Sobre Mi</a>
+                </li>
+                <li class="menu-header-ul-item">
                     <a href="#productos">Productos</a>
+                </li>
+                <li class="menu-header-ul-item">
                     <a href="#reseñas">Reseñas</a>
+                </li>
+                <li class="menu-header-ul-item">
                     <a href="#contacto">Contacto</a>
-                </ul>
-            </nav>
-        </div>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
