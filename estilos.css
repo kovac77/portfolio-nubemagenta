@@ -5,12 +5,13 @@ html {
 
 }
 
-
-body {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+}
+
+body {
     /*tamaño de letra responsive*/
     font-size: clamp(1rem, 3vw, 2rem);
     /*Gradiente*/
@@ -22,44 +23,66 @@ body {
 
 /*Header*/
 
+.menu-header-nav {
+    height: 7%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color:#6a0a90;
+    position: absolute;
+
+}
+
 .menu-header-ul {
     list-style: none;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
-
+    width: 100%;
+    top: 100%;
+    height: 0;
+    overflow: hidden;
+    gap: 3rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.591);
+    background-color:#9304cc;
+    position: absolute;
 
-    transition: transform 0.3s;
-    transform: translateY(-100%);
+    transition: all .3s;
 }
-.menu-header-icono{
-    margin: 2%;
+
+.menu-header-icono {
     cursor: pointer;
+    top: 0.7rem;
+    right: 1.5rem;
     position: absolute;
     z-index: 1;
 }
 
-.menu-header-icono-checkbox:checked + .menu-header-ul{
-    transform: translateY(0);
+#menu-header-icono-checkbox:checked+#menu-header-ul-id {
+    height: 95vh;
+
 }
-.menu-header-icono-checkbox{
+
+#menu-header-icono-checkbox {
     display: none;
 }
 
 
-.menu-header-ul-item{
+.menu-header-ul-item {
     padding: 1em;
 }
 
 .menu-header-ul a {
-    color: #d618fc;
+    color: #d9d1d1;
     text-decoration: none;
     font-family: "Boogaloo", sans-serif;
     font-weight: bold;
+    font-size: 3.5rem;
     cursor: pointer;
     transition: all 400ms ease;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.91);
@@ -73,8 +96,12 @@ body {
 
 .header .logo-header {
     color: aliceblue;
+    cursor: pointer;
+    top: 0.7rem;
+    left: 1.5rem;
+    position: absolute;
+    z-index: 1;
 }
-
 
 /*Main*/
 
@@ -96,6 +123,10 @@ main h1 {
     background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /*Main - Inicio*/
@@ -123,11 +154,6 @@ main h1 {
 /*Main - sobre-mi*/
 
 .sobre-mi .contenedor {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -159,7 +185,7 @@ main h1 {
 .productos .contenedor-imagenes {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     border: 1px solid wheat;
     flex-flow: wrap;
     gap: 20px;
@@ -220,10 +246,13 @@ main h1 {
     border: 2px solid #f57524;
     padding: 3%;
 }
-.grilla-comentarios>div h4{
+
+.grilla-comentarios>div h4 {
+    font-size: medium;
     color: rgb(255, 150, 150);
 }
-.grilla-comentarios>div p{
+
+.grilla-comentarios>div p {
     font-size: medium;
     color: rgb(229, 229, 229);
 }
@@ -261,31 +290,28 @@ main h1 {
 .item7 {
     grid-area: item7;
 }
-    
-    
+
+
 /*Main - contacto*/
 .contacto {
-
     background: url(imagenes/img.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-
 }
 
 .contacto .contenedor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: row;
     background: none;
 }
 
+.contacto>.contenedor {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 5%;
+}
+
 .contacto .contenedor form {
-    margin-top: 3%;
+    margin-top: 2%;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
@@ -299,7 +325,7 @@ main h1 {
     color: #f57524;
     font-family: Roboto;
     font-weight: bold;
-    text-shadow:2px 2px 10px #00000090;
+    text-shadow: 2px 2px 10px #00000090;
     margin: 2%;
 }
 
@@ -343,7 +369,7 @@ main h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
     z-index: 1;
-    text-shadow:2px 2px 10px #00000090;
+    text-shadow: 2px 2px 10px #00000090;
 }
 
 .contacto button::before {
@@ -365,38 +391,99 @@ main h1 {
 }
 
 /*Footer*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    height: 5vh;
+}
+
+.footer .redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10%;
+    list-style: none;
+    align-items: center;
+}
 
 
 
 /*Medias Querys*/
 
 /*Media header*/
-@media (min-width: 1100px){
+@media (min-width: 1260px) {
 
-    .menu-header-ul{
+    /* Barra de navegación */
+    .menu-header-nav {
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.549);
+        padding: 10px;
+        position: fixed;
+        z-index: 1000;
+        /*para que las imagenes del body no se superpongan cuando scrolleo*/
+    }
+
+    /* Menú */
+    .menu-header-ul {
         display: flex;
         flex-direction: row;
-        position: fixed;
+        align-items: center;
+        height: 100%;
         width: 100%;
-        transform: translateY(0);
+        margin: 0 auto;
+        margin-left: 10%;
+        padding: 10px 0;
+        background-color: unset;
+        position: relative;
+        top: 5%;
     }
-}
 
-@media (min-width: 1100px){
-
-    .menu-header-icono{
+    /* Icono de hamburguesa */
+    .menu-header-icono {
         display: none;
-        transform: translate(0);
     }
-   
+
+    /* Enlaces */
+    .menu-header-ul a {
+        color: #d1d1d1;
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+
+    /* Logo */
+    .logo-header {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    /*Por si se mantiene el chk y se minimiza la ventana*/
+    #menu-header-icono-checkbox:checked+#menu-header-ul-id {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        margin-left: 10%;
+    }
+
 }
 
 /*Media Reseñas*/
-@media (width <= 1080px){
+@media (width <=1080px) {
 
     .reseñas .grilla-comentarios {
         display: grid;
-        grid-template-columns:1fr ;
+        grid-template-columns: 1fr;
         grid-template-areas:
             'item1'
             'item2 '
@@ -410,30 +497,32 @@ main h1 {
     .item1 {
         grid-area: item1;
     }
-    
+
     .item2 {
         grid-area: item2;
     }
-    
+
     .item3 {
         grid-area: item3;
     }
-    
+
     .item4 {
         grid-area: item4;
     }
-    
+
     .item5 {
         grid-area: item5;
     }
-    
+
     .item6 {
         grid-area: item6;
     }
-    
+
     .item7 {
         grid-area: item7;
     }
-    
+
 }
 
+/*Media Contacto*/
+@media (min-width: 750px) {}
