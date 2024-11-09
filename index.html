@@ -71,33 +71,72 @@
         <!--Seccion Productos-->
         <section id="productos" class="productos">
             <div class="contenedor">
-                <h1>Galeria</h1>
-                <div class="contenedor-imagenes">
-                    <div class="tarjeta">
-                        <img src="https://dummyimage.com/800x600/000000/bb0cf0.jpg" class="img-tarjeta" alt="">
-                        <div class="link-tarjeta">
-                            <a href="#">Ver ilustracion</a>
+                <h1>Productos</h1>
+
+                <section class="ilustraciones">
+                    <h3>Ilustraciones</h3>
+                    <div class="contenedor-imagenes">
+                        <div class="tarjeta">
+                            <img src="https://dummyimage.com/800x600/000000/bb0cf0.jpg" class="img-tarjeta" alt="">
+                            <div class="link-tarjeta">
+                                <a href="#">Ver ilustracion</a>
+                            </div>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="https://dummyimage.com/800x600/000000/bb0cf0.jpg" class="img-tarjeta" alt="">
+                            <div class="link-tarjeta">
+                                <a href="#">Ver ilustracion</a>
+                            </div>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="https://dummyimage.com/800x600/000000/bb0cf0.jpg" class="img-tarjeta" alt="">
+                            <div class="link-tarjeta">
+                                <a href="#">Ver ilustracion</a>
+                            </div>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="https://dummyimage.com/800x600/000000/bb0cf0.jpg" class="img-tarjeta" alt="">
+                            <div class="link-tarjeta">
+                                <a href="#">Ver ilustracion</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="tarjeta">
-                        <img src="https://dummyimage.com/800x600/000000/bb0cf0.jpg" class="img-tarjeta" alt="">
-                        <div class="link-tarjeta">
-                            <a href="#">Ver ilustracion</a>
-                        </div>
+                </section>
+
+                <section class="animaciones">
+                    <h3>Animaciones</h3>
+                    <div class="contenedor-animaciones">
+                        <video width="40%" height="40%" controls>
+                            <source src="imagenes/animaciones/Animacion halloween vocaloid.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <video width="40%" height="40%" controls>
+                            <source src="imagenes/animaciones/animacion miku.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <video width="40%" height="40%" controls>
+                            <source src="imagenes/animaciones/Banner nuevo lpm MP4.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <video width="40%" height="40%" controls>
+                            <source src="imagenes/animaciones/historia de emotes.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <video width="40%" height="40%" controls>
+                            <source src="imagenes/animaciones/intro jett sin overlay y con hojas.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <video width="40%" height="40%" controls>
+                            <source src="imagenes/animaciones/intro vikingo 4.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <video width="40%" height="40%" controls>
+                            <source src="imagenes/animaciones/reel ryota.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
                     </div>
-                    <div class="tarjeta">
-                        <img src="https://dummyimage.com/800x600/000000/bb0cf0.jpg" class="img-tarjeta" alt="">
-                        <div class="link-tarjeta">
-                            <a href="#">Ver ilustracion</a>
-                        </div>
-                    </div>
-                    <div class="tarjeta">
-                        <img src="https://dummyimage.com/800x600/000000/bb0cf0.jpg" class="img-tarjeta" alt="">
-                        <div class="link-tarjeta">
-                            <a href="#">Ver ilustracion</a>
-                        </div>
-                    </div>
-                </div>
+                </section>
+
             </div>
         </section>
 
@@ -157,16 +196,7 @@
                     </div>
                 </div>
         </section>
-        <section id="videos" class="videos">
-            <div class="contenedor">
-                <h1>Videos</h1>
-                <video controls>
-                    <source src="https://www.youtube.com/watch?v=vH6sFPvuUxc&t=34s">
-                    Tu navegador no es compatible con videos HTML5
-                </video>
 
-            </div>
-        </section>
 
         <!--Seccion Contacto-->
         <section id="contacto" class="contacto">
@@ -197,34 +227,39 @@
     </main>
 
     <footer class="footer">
-        <ul class="redes-sociales">
-            <li>
-                <i class="fa-brands fa-whatsapp fa-xl" style="color: #ffffff;"></i>
-            </li>
-            <li>
-                <i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i>
-            </li>
-            <li>
-                <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
-            </li>
-            <li>
-                <i class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i>
-            </li>
-            <li>
-                <i class="fa-brands fa-twitch fa-xl" style="color: #ffffff;"></i>
-            </li>
-            <li>
-                <i class="fa-brands fa-discord fa-xl" style="color: #ffffff;"></i>
-            </li>
-            <li>
-                <i class="fa-brands fa-artstation fa-xl" style="color: #ffffff;"></i>
-            </li>
-        </ul>
-        <br>
-        <h5 style="color: #ffffff;">Seguime en mis redes</h5>
-        <div>
-            <video src="imagenes/animacion-footer.mp4" autoplay loop height="25%" width="25%">
-            </video>
+        <div class="contenedor-footer">
+            <ul class="redes-sociales">
+                <li>
+                    <i class="fa-brands fa-whatsapp fa-2xl" style="color: #ffffff;"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-facebook fa-2xl" style="color: #ffffff;"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff;"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-twitch fa-2xl" style="color: #ffffff;"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-discord fa-2xl" style="color: #ffffff;"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-artstation fa-2xl" style="color: #ffffff;"></i>
+                </li>
+            </ul>
+            <br>
+            <h5 style="color: #ffffff;">Seguime en mis redes <br> para mas contenido</h5>
+            <div>
+                <video autoplay loop height="15%" width="15%">
+                    <source src="imagenes/animaciones/animacion-footer.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta video
+                </video>
+            </div>
+
         </div>
 
     </footer>
