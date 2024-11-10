@@ -18,7 +18,9 @@
 <body>
     <header class="header">
         <nav class="menu-header-nav">
-            <div class="logo-header">LOGO</div>
+            <a href="#inicio">
+                <div class="logo-header">LOGO</div>
+            </a>
 
             <label class="menu-header-icono" for="menu-header-icono-checkbox">
                 <i class="fa-solid fa-bars fa-2xl" style="color: #dad5e7;"></i>
@@ -47,6 +49,19 @@
     </header>
 
     <main>
+        <!-- flechas de scrolleo inicio/fin -->
+        <div class="flecha-scrolleo-arriba">
+            <a href="#inicio">
+                <i class="fa-solid fa-circle-chevron-up fa-2xl" href="#inicio"></i>
+            </a>
+        </div>
+        <div class="flecha-scrolleo-abajo">
+            <a href="#footer">
+                <i class="fa-solid fa-circle-chevron-down fa-2xl" href="#inicio"></i>
+            </a>
+        </div>
+
+
         <!--Seccion Inicio-->
         <section id="inicio" class="inicio">
             <video autoplay muted loop class="video-inicio">
@@ -122,7 +137,7 @@
                         </div>
                     </div>
                 </section>
-
+                <br>
                 <section class="animaciones">
                     <h3>Animaciones</h3>
                     <div class="grilla-animaciones">
@@ -264,7 +279,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="contenedor-footer">
             <ul class="redes-sociales">
                 <li>
@@ -291,7 +306,7 @@
             </ul>
             <br>
             <h5 style="color: #ffffff;">Seguime en mis redes <br> para mas contenido</h5>
-            <video autoplay loop height="15%" width="15%">
+            <video autoplay loop height="150px" width="150px">
                 <source src="imagenes/animaciones/animacion-footer.mp4" type="video/mp4">
                 Tu navegador no soporta la etiqueta video
             </video>
