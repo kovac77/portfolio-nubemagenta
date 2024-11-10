@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
     /*scroll suave al apretar los links*/
     font-family: Helvetica, Verdana, Serif;
-
 }
 
 * {
@@ -33,11 +32,12 @@ body {
 /*Header*/
 
 .menu-header-nav {
-    height: 7%;
+    height: 9%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     background-color: #000000;
     position: absolute;
@@ -72,7 +72,6 @@ body {
 
 #menu-header-icono-checkbox:checked+#menu-header-ul-id {
     height: 95vh;
-
 }
 
 #menu-header-icono-checkbox {
@@ -101,12 +100,17 @@ body {
 }
 
 .header .logo-header {
-    color: rgb(255, 0, 230);
     cursor: pointer;
-    top: 0.7rem;
-    left: 1.5rem;
+    top: 0.3rem;
+    left: 0.6rem;
     position: absolute;
     z-index: 1;
+    height: 80%;
+    width: 10%;
+}
+.logo-header img{
+    max-height: 100%; 
+
 }
 
 /*Main*/
@@ -220,9 +224,10 @@ main h1 {
 }
 
 .inicio .parrafo-inicio button:hover {
+    color: rgb(0, 179, 255);
+    text-shadow: 2px 2px 12px rgb(0, 0, 0);
     background-color: rgba(11, 100, 216, 0.268);
     transform: translateY(-3%);
-    /*hace que al pasar el cursor la tajeta se va a mover*/
 }
 
 .inicio .video-inicio {
@@ -252,11 +257,10 @@ main h1 {
 .sobre-mi-imagen {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 
-    grid-column: 4/7;
-    grid-row: 1/5;
-
+    grid-column: 3/7;
+    grid-row: 1/4;
 }
 
 .sobre-mi-articulo {
