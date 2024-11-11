@@ -161,8 +161,6 @@ main h1 {
     transform: rotateY(180deg);
 }
 
-
-
 /*contenedores de las sesiones*/
 .contenedor {
     margin-left: 10%;
@@ -255,23 +253,23 @@ main h1 {
 }
 
 .sobre-mi-imagen {
-    width: 100%;
     height: 100%;
-    object-fit: contain;
+    width: 100%;
 
-    grid-column: 3/7;
+    grid-column: 4/7;
     grid-row: 1/4;
 }
 
 .sobre-mi-articulo {
+    margin: 0;
+    padding: 0;
     backdrop-filter: blur(20px);
-    padding: 2%;
     box-shadow: 0 0 10px -8px #00000084;
     color: #e699ed;
     border-radius: 10px;
 
     grid-column: 2/6;
-    grid-row: 3/6;
+    grid-row: 2/6;
 }
 
 /*Main - productos*/
