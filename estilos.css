@@ -110,7 +110,6 @@ body {
 }
 .logo-header img{
     max-height: 100%; 
-
 }
 
 /*Main*/
@@ -272,16 +271,16 @@ main h1 {
     grid-row: 2/6;
 }
 
-/*Main - productos*/
+/*Main - Galeria*/
 
 /*ilustraciones*/
-.productos .contenedor {
+.galeria .contenedor {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.productos h3 {
+.galeria h3 {
     margin: 20px 0;
     color: #ff2386;
     font-weight: bolder;
@@ -290,7 +289,7 @@ main h1 {
     border-radius: 50px;
 }
 
-.productos .contenedor-imagenes {
+.galeria .contenedor-ilustraciones {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -298,7 +297,7 @@ main h1 {
     gap: 20px;
 }
 
-.productos .tarjeta {
+.galeria .tarjeta-ilustraciones {
     position: relative;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -307,42 +306,16 @@ main h1 {
     max-width: 400px;
 }
 
-.productos .tarjeta .img-tarjeta {
+.galeria .tarjeta-ilustraciones .img-tarjeta {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.productos .tarjeta .link-tarjeta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: -100%;
-    position: absolute;
-    background: #5a095b42;
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-.productos .tarjeta .link-tarjeta a {
-    text-decoration: none;
-    text-shadow: 2px 1px 1px #000000;
-    color: #0cffd6;
-}
-
-.tarjeta:hover .link-tarjeta {
-    right: 0;
-}
-
 /*Animaciones*/
 
-.productos .grilla-animaciones {
+.galeria .grilla-animaciones {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
@@ -391,6 +364,83 @@ main h1 {
 
 .animacion7 {
     grid-area: animacion7;
+}
+
+/*Main - productos*/
+
+/*ilustraciones*/
+.productos .contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.productos h3 {
+    margin: 20px 0;
+    color: #ff2386;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-shadow: 2px 2px 1px #000000;
+    border-radius: 50px;
+}
+
+.productos .contenedor-producto1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 20px;
+}
+
+.productos .tarjeta {
+    position: relative;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border: 8px solid #fff;
+    border-radius: 15px;
+    max-width: 400px;
+}
+
+.productos .tarjeta .img-tarjeta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.productos .tarjeta .link-tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #5a095b42;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.productos .tarjeta .link-tarjeta a {
+    text-decoration: none;
+    text-shadow: 2px 1px 1px #000000;
+    color: #0cffd6;
+    transition: all 400ms ease;
+}
+
+.productos .tarjeta .link-tarjeta a:hover{
+    color: #f5409b;
+    text-shadow: 2px 2px 10px rgba(96, 6, 6, 0.97),
+    3px 2px 10px rgb(0, 0, 0);
+    transform: translateY(-10%);
+}
+
+.tarjeta:hover .link-tarjeta {
+    right: 0;
 }
 
 
@@ -717,7 +767,7 @@ main h1 {
 
 /*media Animaciones*/
 @media (width <=1160px) {
-    .productos .grilla-animaciones {
+    .galeria .grilla-animaciones {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -765,7 +815,7 @@ main h1 {
 }
 
 @media (width <=818px) {
-    .productos .grilla-animaciones {
+    .galeria .grilla-animaciones {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;

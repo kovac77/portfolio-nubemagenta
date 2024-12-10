@@ -1,2 +1,0 @@
-# Se presenta esta pagina como proyecto para el Curso Front-End JS, dictado por el profesor Nicolas Rivera en el marco del programa TalentoTech de la Ciudad de Buenos Aires.
-# Esta pagina esta diseñada como catalogo de un artista digital, exponiendo sus distintos trabajos realizados por este. Como fin ultimo, esta pagina buscar ser un metodo moderno y sofisticado de propaganda, al dar una mayor exposicion de los trabajos del artista .
