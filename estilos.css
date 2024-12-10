@@ -297,7 +297,7 @@ main h1 {
     gap: 20px;
 }
 
-.galeria .tarjeta-ilustraciones {
+.galeria .tarjeta {
     position: relative;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -306,11 +306,46 @@ main h1 {
     max-width: 400px;
 }
 
-.galeria .tarjeta-ilustraciones .img-tarjeta {
+.galeria .tarjeta .img-tarjeta {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.galeria .tarjeta .link-tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #5a095b42;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.galeria .tarjeta .link-tarjeta a {
+    text-decoration: none;
+    text-shadow: 2px 1px 1px #000000;
+    color: #0cffd6;
+    transition: all 400ms ease;
+}
+
+.galeria .tarjeta .link-tarjeta a:hover{
+    color: #f5409b;
+    text-shadow: 2px 2px 10px rgba(96, 6, 6, 0.97),
+    3px 2px 10px rgb(0, 0, 0);
+    
+}
+
+.tarjeta:hover .link-tarjeta {
+    right: 0;
 }
 
 /*Animaciones*/
@@ -409,18 +444,17 @@ main h1 {
 }
 
 .productos .tarjeta .link-tarjeta {
-    display: flex;
-    flex-direction: column;
+    display: none;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 50px;
     width: 100%;
-    height: 100%;
-    top: 0;
-    right: -100%;
+    height: 10%;
+    bottom: 0;
     position: absolute;
-    background: #5a095b42;
-    backdrop-filter: blur(5px);
+    background: #00000042;
+    /* backdrop-filter: blur(5px); */
     border-radius: 10px;
     transition: 0.5s;
 }
@@ -436,11 +470,11 @@ main h1 {
     color: #f5409b;
     text-shadow: 2px 2px 10px rgba(96, 6, 6, 0.97),
     3px 2px 10px rgb(0, 0, 0);
-    transform: translateY(-10%);
+    transform: translateY(-5%);
 }
 
 .tarjeta:hover .link-tarjeta {
-    right: 0;
+    display: flex;
 }
 
 
