@@ -43,6 +43,7 @@ function cargarCarrito() {
     });
 }
 
+/*Actualizar carrito*/
 window.addEventListener('storage', function(event) 
 { 
     if (event.key === 'carrito-actualizado') { 

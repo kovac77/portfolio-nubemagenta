@@ -21,6 +21,7 @@ let productos = [
 
 ];
 
+var cantidadCarrito=localStorage.getItem('cantidad-carrito') || 0;
 /*insertar los productos dentro de la seccion "productos"*/
 
 /*Seleccionar la seccion "productos"*/
@@ -50,6 +51,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 //----------CARRITO-----------------------
+
+function actualizarIconoCarrito(){
+    console.log(cantidadCarrito);
+    document.getElementById('carrito-cantidad').textContent= cantidadCarrito;
+}
+document.addEventListener("DOMContentLoaded", () =>{
+    actualizarIconoCarrito();
+});
+
 function agregarAlCarrito(id) {
     //obtener elemento por su id
     const idProducto = document.getElementById(id);
@@ -72,9 +82,14 @@ function agregarAlCarrito(id) {
         arregloCarrito.push({ id: id, nombreProducto, precioProducto, descripcionProducto, imagenProducto, cantidad: 1 });
 
     }
+    cantidadCarrito++;
+
     //Guardar carrito en LocalStorage
     localStorage.setItem('carrito', JSON.stringify(arregloCarrito));
     //actualizar carrito
     localStorage.setItem('carrito-actualizado', Date.now().toString()); 
+
+    actualizarIconoCarrito();
 }
 
+localStorage.setItem('cantidad-carrito',cantidadCarrito);
