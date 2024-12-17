@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                                     alt="imagen-producto">
                                 <div class="link-tarjeta">
                                     <a href="carrito.html"><i class="fa-regular fa-eye"></i></a>
-                                    <a href="#" onclick="agregarAlCarrito('${producto.id}')"><i class="fa-solid fa-cart-plus"></i></a>
+                                    <a onclick="agregarAlCarrito('${producto.id}')"><i class="fa-solid fa-cart-plus"></i></a>
                                     <a href="carrito.html"><i class="fa-solid fa-heart"></i></a>
                                 </div>
                             </div>`;
@@ -66,7 +66,7 @@ function agregarAlCarrito(id) {
     let productoExistente = arregloCarrito.find(producto => producto.id === id);
     if (productoExistente) {
         //si existe suma cantidad
-        idProducto.cantidad++;
+        productoExistente.cantidad++;
     } else {
         //agregar el producto al arregloCarrito con cantidad 1
         arregloCarrito.push({ id: id, nombreProducto, precioProducto, descripcionProducto, imagenProducto, cantidad: 1 });
@@ -78,14 +78,30 @@ function agregarAlCarrito(id) {
 }
 
 function eliminarProducto(id) {
+    id=parseInt(id);
     let arregloCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    arregloCarrito = arregloCarrito.filter(function (producto) {
-        return producto.id !== id;
-    });
+
+    let productoExistente = arregloCarrito.find(producto => parseInt(producto.id) === id);
+    console.log("prod existente: ",productoExistente );
+    if(productoExistente.cantidad > 1){
+        productoExistente.cantidad--;
+    }else{
+        arregloCarrito = arregloCarrito.filter(function(producto) {
+            return parseInt(producto.id) !== id;
+        });
+
+    }
+
+
     localStorage.setItem('carrito', JSON.stringify(arregloCarrito));
     actualizarCarrito();
 }
 
+
+function vaciarCarrito(){
+    localStorage.removeItem("carrito");
+    actualizarCarrito();
+}
 
 function actualizarCarrito() {
     let arregloCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -102,6 +118,8 @@ function actualizarCarrito() {
         contenedorCarrito.appendChild(li);
     });
 }
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     actualizarCarrito();
