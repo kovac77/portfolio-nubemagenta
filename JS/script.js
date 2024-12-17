@@ -73,8 +73,10 @@ function agregarAlCarrito(id) {
 
     }
     //Guardar carrito en LocalStorage
-    localStorage.setItem('carrito', JSON.stringify(arregloCarrito))
+    localStorage.setItem('carrito', JSON.stringify(arregloCarrito));
     actualizarCarrito();
+
+    
 }
 
 function eliminarProducto(id) {

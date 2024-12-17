@@ -472,6 +472,7 @@ main h1 {
     text-shadow: 2px 1px 1px #000000;
     color: #0cffd6;
     transition: all 400ms ease;
+    cursor: pointer;
 }
 
 .productos .tarjeta .link-tarjeta a:hover{
