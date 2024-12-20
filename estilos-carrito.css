@@ -11,7 +11,10 @@ html {
 }
 
 .contenedor{
+
     background: -webkit-linear-gradient(90deg, #f20089,#4ea8de,#80ffdb);
+    background: -moz-linear-gradient(90deg, #f20089,#4ea8de,#80ffdb);
+    background: -o-linear-gradient(90deg, #f20089,#4ea8de,#80ffdb);
     background: linear-gradient(90deg, #f20089,#4ea8de,#80ffdb);
 }
 

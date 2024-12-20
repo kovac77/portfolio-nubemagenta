@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                                 <img src="${producto.urlImagen}" class="img-tarjeta"
                                     alt="imagen-producto">
                                 <div class="link-tarjeta">
-                                    <a href="carrito.html"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="${producto.urlImagen}" target="_blank"><i class="fa-regular fa-eye"></i></a>
                                     <a onclick="agregarAlCarrito('${producto.id}')"><i class="fa-solid fa-cart-plus"></i></a>
                                     <a href="carrito.html"><i class="fa-solid fa-heart"></i></a>
                                 </div>
