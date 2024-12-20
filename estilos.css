@@ -135,12 +135,12 @@ main h1 {
     font-size: 24px;
     cursor: pointer;
     font-size: 50px;
+    z-index: 1000;
 }
 
 .icono-carrito i{
     color: rgb(0, 208, 255);
     text-shadow: 5px 0px 10px #000000;
-    z-index: 1000;
     transition: transform 400ms;
 }
 

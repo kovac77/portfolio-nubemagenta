@@ -18,6 +18,31 @@ let productos = [
         "cantidad": 0,
         "urlImagen": "./imagenes/galeria/tanjiro.png",
     },
+    {
+        "id": 3,
+        "nombre": "Titulo 3",
+        "precio": 50.00,
+        "descripcion": "Descripcion 3",
+        "cantidad": 0,
+        "urlImagen": "./imagenes/galeria/tanjiro.png",
+    },
+    {
+        "id": 4,
+        "nombre": "Titulo 4",
+        "precio": 50.00,
+        "descripcion": "Descripcion 4",
+        "cantidad": 0,
+        "urlImagen": "./imagenes/galeria/tanjiro.png",
+    },
+    {
+        "id": 5,
+        "nombre": "Titulo 5",
+        "precio": 50.00,
+        "descripcion": "Descripcion 5",
+        "cantidad": 0,
+        "urlImagen": "./imagenes/galeria/tanjiro.png",
+    },
+
 
 ];
 
