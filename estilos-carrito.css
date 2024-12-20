@@ -10,53 +10,6 @@ html {
     padding: 0;
 }
 
-body {
-    /*tamaño de letra responsive*/
-    font-size: clamp(1rem, 3vw, 2rem);
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    max-height: 100%;
-    max-width: 100%;
-    padding: 0;
-    right: 0;
-    top: 0;
-}
-
-.contenedor {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-}
-.contenedor h1{
-    color: rgb(238, 228, 238);
-}
-
-.contenedor button {
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 50px;
-    margin-top: 15%;
-    border-radius: 10px;
-    border: thick;
-    box-shadow: 2px 2px 12px black;
-    background-color: rgb(204, 50, 132);
-    color: whitesmoke;
-    transition: all 400ms ease;
-    cursor: pointer;
-}
-
-.contenedor button:hover {
-    color: rgb(229, 10, 131);
-    text-shadow: 5px 2px 12px rgb(12, 8, 8);
-    background-color: rgba(11, 100, 216, 0.268);
-    transform: translateY(-3%);
-}
-
 .contenedor .video-fondo {
     position: absolute;
     top: 0;
@@ -68,19 +21,36 @@ body {
     filter: brightness(30%);
 }
 
-.redes-sociales{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 30px;
-    list-style: none;
-    align-items: center;
-    margin-top: 10%;
-    padding-top: 5% ;
-    cursor: pointer;
+
+.carrito{
+    min-height: 80vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
 }
-.redes-sociales li{
-    padding: 10px 10px;
+
+
+.tabla-productos{
+    display: flex;
+}
+
+.tabla-productos > img{
+    width: 9rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.tabla-cantidad > input{
+    width: 40px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.sin-fondo, .sin-fondo th, .sin-fondo td{
+    background-color: rgba(252, 196, 228, 0.316) !important;
 }
 

@@ -21,7 +21,6 @@ let productos = [
 
 ];
 
-var cantidadCarrito=localStorage.getItem('cantidad-carrito') || 0;
 /*insertar los productos dentro de la seccion "productos"*/
 
 /*Seleccionar la seccion "productos"*/
@@ -52,14 +51,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 //----------CARRITO-----------------------
 
-function actualizarIconoCarrito(){
-    console.log(cantidadCarrito);
-    document.getElementById('carrito-cantidad').textContent= cantidadCarrito;
-}
-document.addEventListener("DOMContentLoaded", () =>{
-    actualizarIconoCarrito();
-});
-
+/*agrega el producto al localStorage*/
 function agregarAlCarrito(id) {
     //obtener elemento por su id
     const idProducto = document.getElementById(id);
@@ -82,7 +74,6 @@ function agregarAlCarrito(id) {
         arregloCarrito.push({ id: id, nombreProducto, precioProducto, descripcionProducto, imagenProducto, cantidad: 1 });
 
     }
-    cantidadCarrito++;
 
     //Guardar carrito en LocalStorage
     localStorage.setItem('carrito', JSON.stringify(arregloCarrito));
@@ -92,4 +83,23 @@ function agregarAlCarrito(id) {
     actualizarIconoCarrito();
 }
 
-localStorage.setItem('cantidad-carrito',cantidadCarrito);
+function actualizarIconoCarrito(){
+    let totalCantidad = localStorage.getItem('carrito-cantidad') || 0;
+    let iconoCarrito = document.getElementById('carrito-cantidad');
+
+    if (iconoCarrito) {
+        iconoCarrito.textContent = totalCantidad;
+    }
+}
+
+/*actualiza el icono*/
+document.addEventListener("DOMContentLoaded", actualizarIconoCarrito);
+
+/* Escuchar cambios en el localStorage*/
+window.addEventListener('storage', function(event) 
+{ 
+    if (event.key === 'carrito-cantidad') 
+        { 
+            actualizarIconoCarrito(); 
+        } 
+    });

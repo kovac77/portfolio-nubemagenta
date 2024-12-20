@@ -137,6 +137,19 @@ main h1 {
     font-size: 50px;
 }
 
+.icono-carrito i{
+    color: rgb(0, 208, 255);
+    text-shadow: 5px 0px 10px #000000;
+    z-index: 1000;
+    transition: transform 400ms;
+}
+
+.icono-carrito i:hover{
+    transform: scale(1.2);
+    text-shadow: 2px 2px 10px rgba(96, 6, 6, 0.97),
+    3px 2px 10px rgb(0, 0, 0);
+}
+
 .carrito-cantidad {
     background-color: red;
     color: white;
@@ -147,7 +160,6 @@ main h1 {
     top: -10px;
     right: -10px;
 }
-
 
 /*Flechas de scrolleo*/
 
